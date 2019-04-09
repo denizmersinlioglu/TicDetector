@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4066AF41225A9DB2001FCBF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4066AF40225A9DB2001FCBF5 /* AppDelegate.swift */; };
+		4066AF43225A9DB2001FCBF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4066AF42225A9DB2001FCBF5 /* ViewController.swift */; };
+		4066AF46225A9DB2001FCBF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4066AF44225A9DB2001FCBF5 /* Main.storyboard */; };
+		4066AF48225A9DB2001FCBF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4066AF47225A9DB2001FCBF5 /* Assets.xcassets */; };
+		4066AF4B225A9DB2001FCBF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4066AF49225A9DB2001FCBF5 /* LaunchScreen.storyboard */; };
+		40BD15AC225AA927007CA43C /* AcceleremoterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BD15AB225AA927007CA43C /* AcceleremoterManager.swift */; };
+		40BD15AF225AA935007CA43C /* PredictionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BD15AD225AA935007CA43C /* PredictionViewController.swift */; };
+		40BD15B0225AA935007CA43C /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BD15AE225AA935007CA43C /* TrainingViewController.swift */; };
+		40BD15B5225AB3C6007CA43C /* GRTiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407010DD225AA6B7007A8167 /* GRTiOS.framework */; };
+		40BD15B6225AB3C6007CA43C /* GRTiOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 407010DD225AA6B7007A8167 /* GRTiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		40BD15B8225AB3CA007CA43C /* SwiftR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BD15B1225AAE55007CA43C /* SwiftR.framework */; };
+		40BD15B9225AB3CA007CA43C /* SwiftR.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 40BD15B1225AAE55007CA43C /* SwiftR.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BEFF6DA77253AEC43E7148FB /* Pods_TicDetector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4E09B6B96445F5317C4938D /* Pods_TicDetector.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		40BD15B7225AB3C6007CA43C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				40BD15B6225AB3C6007CA43C /* GRTiOS.framework in Embed Frameworks */,
+				40BD15B9225AB3CA007CA43C /* SwiftR.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0DAD96B1FD4A7FB5732F9C7A /* Pods-TicDetector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicDetector.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TicDetector/Pods-TicDetector.debug.xcconfig"; sourceTree = "<group>"; };
+		4066AF3D225A9DB2001FCBF5 /* TicDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4066AF40225A9DB2001FCBF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4066AF42225A9DB2001FCBF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4066AF45225A9DB2001FCBF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4066AF47225A9DB2001FCBF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4066AF4A225A9DB2001FCBF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4066AF4C225A9DB2001FCBF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4066AF56225A9ED5001FCBF5 /* TicDetector-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TicDetector-Bridging-Header.h"; sourceTree = "<group>"; };
+		407010DD225AA6B7007A8167 /* GRTiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GRTiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40BD15AB225AA927007CA43C /* AcceleremoterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceleremoterManager.swift; sourceTree = "<group>"; };
+		40BD15AD225AA935007CA43C /* PredictionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictionViewController.swift; sourceTree = "<group>"; };
+		40BD15AE225AA935007CA43C /* TrainingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrainingViewController.swift; path = "../../../../Downloads/GRT-iOS-HelloWorld-master/GRT-iOS-HelloWorld/GRT-iOS-HelloWorld/TrainingViewController.swift"; sourceTree = "<group>"; };
+		40BD15B1225AAE55007CA43C /* SwiftR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83F0F265BC3270FD2580A1E9 /* Pods-TicDetector.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicDetector.release.xcconfig"; path = "Pods/Target Support Files/Pods-TicDetector/Pods-TicDetector.release.xcconfig"; sourceTree = "<group>"; };
+		F4E09B6B96445F5317C4938D /* Pods_TicDetector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TicDetector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4066AF3A225A9DB2001FCBF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40BD15B5225AB3C6007CA43C /* GRTiOS.framework in Frameworks */,
+				BEFF6DA77253AEC43E7148FB /* Pods_TicDetector.framework in Frameworks */,
+				40BD15B8225AB3CA007CA43C /* SwiftR.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4066AF34225A9DB2001FCBF5 = {
+			isa = PBXGroup;
+			children = (
+				407010DD225AA6B7007A8167 /* GRTiOS.framework */,
+				4066AF3F225A9DB2001FCBF5 /* TicDetector */,
+				4066AF3E225A9DB2001FCBF5 /* Products */,
+				428F487D390782673A9E6C6B /* Pods */,
+				BEE609EF6F808EA7B23CCB15 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4066AF3E225A9DB2001FCBF5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4066AF3D225A9DB2001FCBF5 /* TicDetector.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4066AF3F225A9DB2001FCBF5 /* TicDetector */ = {
+			isa = PBXGroup;
+			children = (
+				40BD15AD225AA935007CA43C /* PredictionViewController.swift */,
+				40BD15AE225AA935007CA43C /* TrainingViewController.swift */,
+				40BD15AB225AA927007CA43C /* AcceleremoterManager.swift */,
+				4066AF40225A9DB2001FCBF5 /* AppDelegate.swift */,
+				4066AF42225A9DB2001FCBF5 /* ViewController.swift */,
+				4066AF44225A9DB2001FCBF5 /* Main.storyboard */,
+				4066AF47225A9DB2001FCBF5 /* Assets.xcassets */,
+				4066AF49225A9DB2001FCBF5 /* LaunchScreen.storyboard */,
+				4066AF4C225A9DB2001FCBF5 /* Info.plist */,
+				4066AF56225A9ED5001FCBF5 /* TicDetector-Bridging-Header.h */,
+			);
+			path = TicDetector;
+			sourceTree = "<group>";
+		};
+		428F487D390782673A9E6C6B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0DAD96B1FD4A7FB5732F9C7A /* Pods-TicDetector.debug.xcconfig */,
+				83F0F265BC3270FD2580A1E9 /* Pods-TicDetector.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BEE609EF6F808EA7B23CCB15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40BD15B1225AAE55007CA43C /* SwiftR.framework */,
+				F4E09B6B96445F5317C4938D /* Pods_TicDetector.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4066AF3C225A9DB2001FCBF5 /* TicDetector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4066AF4F225A9DB2001FCBF5 /* Build configuration list for PBXNativeTarget "TicDetector" */;
+			buildPhases = (
+				55FF01CDB9EAB6B1BE3E6F67 /* [CP] Check Pods Manifest.lock */,
+				4066AF39225A9DB2001FCBF5 /* Sources */,
+				4066AF3A225A9DB2001FCBF5 /* Frameworks */,
+				4066AF3B225A9DB2001FCBF5 /* Resources */,
+				40BD15B7225AB3C6007CA43C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TicDetector;
+			productName = TicDetector;
+			productReference = 4066AF3D225A9DB2001FCBF5 /* TicDetector.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4066AF35225A9DB2001FCBF5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = DevelopmentHouse;
+				TargetAttributes = {
+					4066AF3C225A9DB2001FCBF5 = {
+						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
+					};
+				};
+			};
+			buildConfigurationList = 4066AF38225A9DB2001FCBF5 /* Build configuration list for PBXProject "TicDetector" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4066AF34225A9DB2001FCBF5;
+			productRefGroup = 4066AF3E225A9DB2001FCBF5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4066AF3C225A9DB2001FCBF5 /* TicDetector */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4066AF3B225A9DB2001FCBF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4066AF4B225A9DB2001FCBF5 /* LaunchScreen.storyboard in Resources */,
+				4066AF48225A9DB2001FCBF5 /* Assets.xcassets in Resources */,
+				4066AF46225A9DB2001FCBF5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		55FF01CDB9EAB6B1BE3E6F67 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TicDetector-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4066AF39225A9DB2001FCBF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40BD15B0225AA935007CA43C /* TrainingViewController.swift in Sources */,
+				40BD15AF225AA935007CA43C /* PredictionViewController.swift in Sources */,
+				4066AF43225A9DB2001FCBF5 /* ViewController.swift in Sources */,
+				4066AF41225A9DB2001FCBF5 /* AppDelegate.swift in Sources */,
+				40BD15AC225AA927007CA43C /* AcceleremoterManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4066AF44225A9DB2001FCBF5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4066AF45225A9DB2001FCBF5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4066AF49225A9DB2001FCBF5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4066AF4A225A9DB2001FCBF5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4066AF4D225A9DB2001FCBF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4066AF4E225A9DB2001FCBF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4066AF50225A9DB2001FCBF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DAD96B1FD4A7FB5732F9C7A /* Pods-TicDetector.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S4X4KH6498;
+				INFOPLIST_FILE = TicDetector/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.developmenthouse.TicDetector;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TicDetector/TicDetector-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4066AF51225A9DB2001FCBF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83F0F265BC3270FD2580A1E9 /* Pods-TicDetector.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S4X4KH6498;
+				INFOPLIST_FILE = TicDetector/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.developmenthouse.TicDetector;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TicDetector/TicDetector-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4066AF38225A9DB2001FCBF5 /* Build configuration list for PBXProject "TicDetector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4066AF4D225A9DB2001FCBF5 /* Debug */,
+				4066AF4E225A9DB2001FCBF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4066AF4F225A9DB2001FCBF5 /* Build configuration list for PBXNativeTarget "TicDetector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4066AF50225A9DB2001FCBF5 /* Debug */,
+				4066AF51225A9DB2001FCBF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4066AF35225A9DB2001FCBF5 /* Project object */;
+}
