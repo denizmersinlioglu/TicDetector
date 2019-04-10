@@ -55,9 +55,9 @@ private:
 
 @interface GestureRecognitionPipeline()
 @property GRT::GestureRecognitionPipeline *instance;
-@property GRT::ClassificationData *classificationData;
-@property GRT::ClassificationData *trainingData;
-@property GRT::VectorFloat *sampleData;
+@property GRT::LabelledTimeSeriesClassificationData *classificationData;
+@property GRT::LabelledTimeSeriesClassificationData *trainingData;
+@property GRT::MatrixFloat *sampleData;
 
 @property NSLogStream *nsLogStream;
 @end
@@ -69,8 +69,8 @@ private:
     self = [super init];
     if (self) {
         self.instance = new GRT::GestureRecognitionPipeline;
-        self.classificationData = new GRT::ClassificationData;
-        self.trainingData = new GRT::ClassificationData;
+        self.classificationData = new GRT::LabelledTimeSeriesClassificationData;
+        self.trainingData = new GRT::LabelledTimeSeriesClassificationData;
         [self setClassifier];
         // Redirect cout to NSLog
         self.nsLogStream = new NSLogStream(std::cout);
@@ -83,11 +83,32 @@ private:
     delete self.nsLogStream;
 }
 
+-(BOOL)getTrained{
+    return self.instance->getTrained();
+}
+
 //// pipeline configuration
 - (void)setClassifier {
-    GRT::RandomForests classifier;
+    GRT::DTW classifier;
     self.instance->setClassifier(classifier);
-    classifier.enableNullRejection(true);
+    
+    //  Turn on null rejection, this lets the classifier output the predicted class label of 0 when the likelihood of a gesture is low
+    classifier.enableNullRejection( true );
+    
+    //Set the null rejection coefficient to 3, this controls the thresholds for the automatic null rejection
+    //You can increase this value if you find that your real-time gestures are not being recognized
+    //If you are getting too many false positives then you should decrease this value
+    classifier.setNullRejectionCoeff( 3 );
+    
+    //Turn on the automatic data triming, this will remove any sections of none movement from the start and end of the training samples
+    classifier.enableTrimTrainingData(true,0.1,90);
+ 
+    //Offset the timeseries data by the first sample, this makes your gestures (more) invariant to the location the gesture is performed
+    classifier.setOffsetTimeseriesUsingFirstSample(true);
+    
+    //Allow the DTW algorithm to search the entire cost matrix
+    classifier.setContrainWarpingPath( true );
+    
     self.instance->addPostProcessingModule(GRT::ClassLabelTimeoutFilter(500, GRT::ClassLabelTimeoutFilter::ALL_CLASS_LABELS));
     self.classificationData->setNumDimensions(3);
 }
@@ -125,8 +146,7 @@ private:
     return result;
 }
 
-- (void)addSamplesToClassificationDataForGesture:(NSUInteger)gesture :(VectorFloat*)vectorData {
-    
+- (void)addSamplesToClassificationDataForGesture:(NSUInteger)gesture :(MatrixFloat*)vectorData {
     self.classificationData->addSample(gesture, *[vectorData cppInstance]);
 }
 

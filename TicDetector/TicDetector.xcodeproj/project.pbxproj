@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		402FF9F3225D64EB00CE5C50 /* GRTiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 402FF9F2225D64EB00CE5C50 /* GRTiOS.framework */; };
+		402FF9F4225D64EB00CE5C50 /* GRTiOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 402FF9F2225D64EB00CE5C50 /* GRTiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4066AF41225A9DB2001FCBF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4066AF40225A9DB2001FCBF5 /* AppDelegate.swift */; };
 		4066AF43225A9DB2001FCBF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4066AF42225A9DB2001FCBF5 /* ViewController.swift */; };
 		4066AF46225A9DB2001FCBF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4066AF44225A9DB2001FCBF5 /* Main.storyboard */; };
@@ -15,8 +17,6 @@
 		40BD15AC225AA927007CA43C /* AcceleremoterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BD15AB225AA927007CA43C /* AcceleremoterManager.swift */; };
 		40BD15AF225AA935007CA43C /* PredictionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BD15AD225AA935007CA43C /* PredictionViewController.swift */; };
 		40BD15B0225AA935007CA43C /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BD15AE225AA935007CA43C /* TrainingViewController.swift */; };
-		40BD15B5225AB3C6007CA43C /* GRTiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407010DD225AA6B7007A8167 /* GRTiOS.framework */; };
-		40BD15B6225AB3C6007CA43C /* GRTiOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 407010DD225AA6B7007A8167 /* GRTiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		40BD15B8225AB3CA007CA43C /* SwiftR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BD15B1225AAE55007CA43C /* SwiftR.framework */; };
 		40BD15B9225AB3CA007CA43C /* SwiftR.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 40BD15B1225AAE55007CA43C /* SwiftR.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BEFF6DA77253AEC43E7148FB /* Pods_TicDetector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4E09B6B96445F5317C4938D /* Pods_TicDetector.framework */; };
@@ -29,7 +29,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				40BD15B6225AB3C6007CA43C /* GRTiOS.framework in Embed Frameworks */,
+				402FF9F4225D64EB00CE5C50 /* GRTiOS.framework in Embed Frameworks */,
 				40BD15B9225AB3CA007CA43C /* SwiftR.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -39,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		0DAD96B1FD4A7FB5732F9C7A /* Pods-TicDetector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicDetector.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TicDetector/Pods-TicDetector.debug.xcconfig"; sourceTree = "<group>"; };
+		402FF9F2225D64EB00CE5C50 /* GRTiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GRTiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4066AF3D225A9DB2001FCBF5 /* TicDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4066AF40225A9DB2001FCBF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4066AF42225A9DB2001FCBF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,7 +48,6 @@
 		4066AF4A225A9DB2001FCBF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4066AF4C225A9DB2001FCBF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4066AF56225A9ED5001FCBF5 /* TicDetector-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TicDetector-Bridging-Header.h"; sourceTree = "<group>"; };
-		407010DD225AA6B7007A8167 /* GRTiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GRTiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40BD15AB225AA927007CA43C /* AcceleremoterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceleremoterManager.swift; sourceTree = "<group>"; };
 		40BD15AD225AA935007CA43C /* PredictionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictionViewController.swift; sourceTree = "<group>"; };
 		40BD15AE225AA935007CA43C /* TrainingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrainingViewController.swift; path = "../../../../Downloads/GRT-iOS-HelloWorld-master/GRT-iOS-HelloWorld/GRT-iOS-HelloWorld/TrainingViewController.swift"; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40BD15B5225AB3C6007CA43C /* GRTiOS.framework in Frameworks */,
+				402FF9F3225D64EB00CE5C50 /* GRTiOS.framework in Frameworks */,
 				BEFF6DA77253AEC43E7148FB /* Pods_TicDetector.framework in Frameworks */,
 				40BD15B8225AB3CA007CA43C /* SwiftR.framework in Frameworks */,
 			);
@@ -73,7 +73,7 @@
 		4066AF34225A9DB2001FCBF5 = {
 			isa = PBXGroup;
 			children = (
-				407010DD225AA6B7007A8167 /* GRTiOS.framework */,
+				402FF9F2225D64EB00CE5C50 /* GRTiOS.framework */,
 				4066AF3F225A9DB2001FCBF5 /* TicDetector */,
 				4066AF3E225A9DB2001FCBF5 /* Products */,
 				428F487D390782673A9E6C6B /* Pods */,

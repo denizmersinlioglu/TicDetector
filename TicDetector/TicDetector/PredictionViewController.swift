@@ -32,8 +32,9 @@ class PredictionViewController: UIViewController {
 
     var currentClassLabel = 0 as UInt
     var labelUpdateTime = Date.timeIntervalSinceReferenceDate
-    let vector = VectorDouble()
-    var pipeline: GestureRecognitionPipeline?
+    let vector = MatrixDouble(size: 0, 3)
+    var queue = Queue<VectorDouble>(maxSize: 15)
+    var pipeline: GestureRecognitionPipeline!
     
     override func viewDidLoad() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -89,6 +90,7 @@ class PredictionViewController: UIViewController {
         
         //If the files have been loaded successfully, we can train the pipeline, and then start real-time gesture prediction
         else if (classificationDataResult && pipelineResult) {
+            print("Pipeline Trained")
             pipeline?.train()
             performGesturePrediction()
         }
@@ -96,13 +98,16 @@ class PredictionViewController: UIViewController {
     
     func performGesturePrediction() {
         accelerometerManager.start { (x, y, z) -> Void in
-            self.vector.clear()
-            self.vector.pushBack(x)
-            self.vector.pushBack(y)
-            self.vector.pushBack(z)
+            let vectorDouble = VectorDouble()
+            vectorDouble.pushBack(x)
+            vectorDouble.pushBack(y)
+            vectorDouble.pushBack(z)
+            
             //Use the incoming accellerometer data to predict what the performed gesture class is
-            self.pipeline?.predict(self.vector)
-
+            if self.pipeline.getTrained(){
+                self.pipeline?.predict(vectorDouble)
+            }
+            
             DispatchQueue.main.async {
                 self.updateGestureCountLabels(gesture: (self.pipeline?.predictedClassLabel)!)
                 print("PRECITED GESTURE", self.pipeline?.predictedClassLabel ?? 0);
@@ -132,4 +137,37 @@ class PredictionViewController: UIViewController {
         
     }
 
+}
+
+struct Queue<T: Equatable>{
+    var maxSize: Int
+    var items:[T] = []
+    
+    init(maxSize: Int) {
+        self.maxSize = maxSize
+    }
+    
+    mutating func enqueue(element: T) -> T?{
+        if contains(element: element){
+            items = items.filter{$0 != element}
+            _ = enqueue(element: element)
+        }else if items.count < maxSize{
+            items.append(element)
+        }else{
+            items.append(element)
+            return dequeue()
+        }
+        return nil
+    }
+    
+    func contains(element: T) -> Bool{
+        return items.filter({$0 == element}).count > 0
+    }
+    
+    mutating func dequeue() -> T?{
+        guard !items.isEmpty else {return nil}
+        let tempElement = items.first
+        items.remove(at: 0)
+        return tempElement
+    }
 }
